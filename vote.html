@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Panel</title>
+    <style>
+        /* Voting Panel */
+        body {
+            font-family: 'DM Serif Display', serif;
+            background: #001c3b;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center; /* Center content horizontally */
+        }
+
+        .voting-panel {
+            position: relative;
+            width: 1440px;
+            height: auto;
+            background: #001c3b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Voting Panel Title */
+        .voting-panel-title {
+            font-family: 'DM Serif Display', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 55px;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        /* Contestant Section */
+        .contestant {
+            width: 1156px;
+            height: 122px;
+            background: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .contestant-name {
+            font-family: 'Tienne', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 40px;
+            color: #000000;
+            flex: 1;
+            text-align: left;
+        }
+
+        .contestant-party {
+            font-family: 'Tienne', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 40px;
+            color: #000000;
+            text-align: center;
+            flex: 1;
+        }
+
+        /* Party Details */
+        .party-details {
+            display: none;
+            font-family: 'Tienne', sans-serif;
+            font-size: 20px;
+            color: #FFFFFF;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        /* Radio Buttons */
+        .contestant input[type="radio"] {
+            margin-right: 20px;
+        }
+
+        /* Submit Vote */
+        .submit-vote {
+            width: 314px;
+            height: 61px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .rectangle-39 {
+            width: 314px;
+            height: 61px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .submit-text {
+            font-family: 'Tienne', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 40px;
+            color: #000000;
+            text-decoration: none; /* Removes underline */
+        }
+
+        /* Remove underline from link */
+        .submit-vote a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="voting-panel">
+        <!-- Voting Panel Title -->
+        <div class="voting-panel-title">Voting Panel</div>
+
+        <form action="thankyou.html" method="POST">
+            <h1>Select a candidate to vote:</h1>
+
+            <div class="contestant">
+                <!-- Radio Button for Candidate -->
+                <input type="radio" name="candidate" value="Vijay" id="vijay-radio" required>
+                <label for="vijay-radio" class="contestant-name">Vijay</label>
+                <div class="contestant-party">Tamilaga Vettri Kazhagam</div>
+            </div>
+
+            <div class="contestant">
+                <!-- Radio Button for Candidate -->
+                <input type="radio" name="candidate" value="Kamal" id="kamal-radio" required>
+                <label for="kamal-radio" class="contestant-name">Kamal</label>
+                <div class="contestant-party">Makkal Needhi Maiam</div>
+            </div>
+
+            <!-- Submit Vote Button -->
+            <div class="submit-vote">
+                <div class="rectangle-39">
+                    <button type="submit" class="submit-text">SUBMIT</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
